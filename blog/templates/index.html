@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url 'blog:index' %}"></a>
+{% for post in posts %}
+    {{post.title }}
+{{ post.category }}
+{% endfor %}
+<img src="{{ post.image.url}}" alt="">
+<br>
+{% block title %} {% endblock %}
+{% endblock %}
